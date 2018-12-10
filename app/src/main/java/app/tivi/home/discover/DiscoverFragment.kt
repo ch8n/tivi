@@ -188,6 +188,10 @@ internal class DiscoverFragment : TiviMvRxFragment() {
             viewModel.onLoginItemClicked((requireActivity() as HomeActivity).authService)
             true
         }
+        R.id.home_settings -> {
+            viewModel.onSettingsClicked(homeNavigator)
+            true
+        }
         R.id.home_privacy_policy -> {
             val builder = CustomTabsIntent.Builder()
             val customTabsIntent = builder.build()
