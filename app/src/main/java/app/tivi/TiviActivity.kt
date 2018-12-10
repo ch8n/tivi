@@ -47,6 +47,11 @@ abstract class TiviActivity : DaggerAppCompatActivity() {
         handleIntent(intent)
     }
 
+    override fun onStart() {
+        super.onStart()
+        updateNightMode()
+    }
+
     open fun handleIntent(intent: Intent) {}
 
     override fun finishAfterTransition() {
